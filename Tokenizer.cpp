@@ -43,9 +43,9 @@ Tokenizer& Tokenizer::operator=(Tokenizer& t) {
 }
 
 Tokenizer::~Tokenizer() {
-//  cout << "Tokenizer Destructor called!" << endl;
   if (this->tokens) {
-//    delete [] this->tokens;
+    delete [] this->tokens;
+    Tokenizer::tokensCount = 0;
   }
 }
 

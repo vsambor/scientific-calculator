@@ -1,11 +1,9 @@
 // FUTURE IMPROVEMENTS:
 // 1. For now the program requires to add space delimiters.
 //    In future it can be done to identify tokens from context. (in tokenizer)
-// 2. Make the destruction working correctly and allow insertion of multiple expressions in one run.
-//    (for now it works only once)
-// 3. Implement tokens operators to perform math operations directly with them.
-// 4. Allow the use of [ ] and eventually { }
-// 5. Do some more testing with different examples (maybe create unit testing)
+// 2. Implement tokens operators to perform math operations directly with them.
+// 3. Implement [ ] and eventually { } and ^ and #
+// 4. Do some more testing with different examples (maybe create unit testing)
 
 
 #include <string>

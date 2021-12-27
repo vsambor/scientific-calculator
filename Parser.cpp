@@ -7,7 +7,12 @@
 Parser::Parser() {}
 
 Parser::Parser(Token *tokens) {
-  this->tokens = tokens;
+  this->tokens = new Token[Tokenizer::tokensCount];
+  
+  for (int i = 0; i < Tokenizer::tokensCount; i++) {
+    this->tokens[i] = tokens[i];
+  }
+  
   this->result = expression();
 }
 
@@ -34,10 +39,8 @@ Parser& Parser::operator=(Parser& p) {
 }
 
 Parser::~Parser() {
-//  cout << "Parser Destructor called!" << endl;
   if (this->tokens) {
     delete [] this->tokens;
-    this->tokens = NULL;
   }
 }
 
